@@ -24,11 +24,7 @@
                 @php($step = $comments->currentPage())
                 @php($i = ($step*5)-5)
                 @foreach($comments as $comment)
-                    @if($step==1)
-                        @php(++ $i)
-                    @else
                         @php($i++)
-                    @endif
                         <div class="panel-heading">{{'#'.$i.' '.$comment->user}}</div>
                         <div class="panel-body">
                             {!! $comment->comment !!}
